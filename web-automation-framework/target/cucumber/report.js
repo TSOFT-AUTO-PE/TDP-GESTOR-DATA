@@ -56,11 +56,11 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 156070100,
+  "duration": 424181661,
   "status": "passed"
 });
 formatter.before({
-  "duration": 7483132800,
+  "duration": 8564736719,
   "status": "passed"
 });
 formatter.scenario({
@@ -95,19 +95,19 @@ formatter.match({
   "location": "web_DCODE.seRealizaElFlujoDCODEExtraeCien(String)"
 });
 formatter.result({
-  "duration": 26632507000,
+  "duration": 30475713761,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1198069700,
+  "duration": 2547499562,
   "status": "passed"
 });
 formatter.before({
-  "duration": 391500,
+  "duration": 2874569,
   "status": "passed"
 });
 formatter.before({
-  "duration": 5428919100,
+  "duration": 3904603084,
   "status": "passed"
 });
 formatter.scenario({
@@ -142,11 +142,11 @@ formatter.match({
   "location": "web_DCODE.seRealizaElFlujoDCODEExtraeCien(String)"
 });
 formatter.result({
-  "duration": 24302201700,
+  "duration": 24222429981,
   "status": "passed"
 });
 formatter.after({
-  "duration": 737725800,
+  "duration": 1781115740,
   "status": "passed"
 });
 });

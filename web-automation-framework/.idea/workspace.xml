@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="360574ac-4aaa-4518-a335-6fb560437bee" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,13 +17,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
@@ -32,11 +24,17 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/excel" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -48,18 +46,6 @@
       <recent name="D:\RepositorioLocal\FrameworkBaseWEB\web-automation-framework\src\main\resources\template" />
       <recent name="C:\Users\admin\Desktop\web-automation-framework\src\main\resources\excel" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="TestNG.RunTest">
     <configuration name="Feature: MyFlight" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
@@ -154,8 +140,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.RunTest" />
-        <item itemvalue="Cucumber java.Feature: web_DCODE" />
-        <item itemvalue="Cucumber java.Feature: MyFlight_Login" />
       </list>
     </recent_temporary>
   </component>
@@ -177,15 +161,36 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1595577043968">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1595577043968" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1595577043968">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1595577043968" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1595577043968">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1595577043968" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1595577043968">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1595577043968" />
+    <state x="546" y="16" key="SettingsEditor" timestamp="1595548393348">
+      <screen x="0" y="0" width="1920" height="1034" />
+    </state>
+    <state x="546" y="16" key="SettingsEditor/0.0.1920.1034@0.0.1920.1034" timestamp="1595548393347" />
   </component>
 </project>

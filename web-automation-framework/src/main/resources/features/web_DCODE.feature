@@ -1,6 +1,6 @@
 Feature: Mercury Tours
 
-  @DCODE
+  @GESDATA_Extraer_Data_WEB_DCODE
   Scenario Outline: Extraer Data WEB DCODE
 
     Given Se realiza el flujo DCODE extrae cien "<caso_prueba>"

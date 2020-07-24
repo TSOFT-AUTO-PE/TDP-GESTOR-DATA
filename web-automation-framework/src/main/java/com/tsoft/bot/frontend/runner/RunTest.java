@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 		features={"src//main//resources//features"},
 		glue={"com.tsoft.bot.frontend.steps.gestion","com.tsoft.bot.frontend.helpers"},
 		plugin = {"pretty", "html:target/cucumber"},
-		tags = {"@DCODE"},
+		tags = {"@GESDATA_Extraer_Data_WEB_DCODE"},
 		monochrome = true
 	)
 
