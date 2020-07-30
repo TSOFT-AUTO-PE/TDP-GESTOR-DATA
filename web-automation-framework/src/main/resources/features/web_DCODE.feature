@@ -8,6 +8,18 @@ Feature: Mercury Tours
     Examples:
       | caso_prueba |
       |           1 |
-      |           2 |
+#      |           2 |
+#      |           3 |
+#      |           4 |
+#      |           5 |
+#      |           6 |
+#      |           7 |
+#      |           8 |
+#      |           9 |
+#      |          10 |
+
+
+
+
 
 

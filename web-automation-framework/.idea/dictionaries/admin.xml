@@ -2,18 +2,22 @@
   <dictionary name="admin">
     <words>
       <w>boton</w>
+      <w>caso</w>
       <w>clic</w>
       <w>columna</w>
       <w>contrasenia</w>
       <w>contraseña</w>
       <w>correctamente</w>
+      <w>dcode</w>
       <w>exitoso</w>
       <w>ingresa</w>
       <w>ingreso</w>
       <w>inició</w>
+      <w>numero</w>
       <w>página</w>
       <w>signin</w>
       <w>usuario</w>
+      <w>validador</w>
     </words>
   </dictionary>
 </component>

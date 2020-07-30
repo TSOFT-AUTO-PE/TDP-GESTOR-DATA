@@ -7,6 +7,7 @@ import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import javax.swing.text.Style;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -36,6 +37,17 @@ public class web_DCODE extends BaseClass {
     By txt_val8 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[8]/td[1]");
     By txt_val9 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[9]/td[1]");
     By txt_val10 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[10]/td[1]");
+
+    By validador_val1 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[1]/td[2]/strong");
+    By validador_val2 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[2]/td[2]/strong");
+    By validador_val3 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[3]/td[2]/strong");
+    By validador_val4 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[4]/td[2]/strong");
+    By validador_val5 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[5]/td[2]/strong");
+    By validador_val6 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[6]/td[2]/strong");
+    By validador_val7 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[7]/td[2]/strong");
+    By validador_val8 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[8]/td[2]/strong");
+    By validador_val9 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[9]/td[2]/strong");
+    By validador_val10 = By.xpath("/html/body/div[2]/div[1]/div/div[6]/div[1]/table/tbody/tr[10]/td[2]/strong");
 
 
 
@@ -70,6 +82,7 @@ public class web_DCODE extends BaseClass {
         Thread.sleep(5000);
         driver.findElement(btn_orden).click();
         Thread.sleep(8000);
+
 
         String valor1 = driver.findElement(txt_val1).getText();
         System.out.println(valor1);
@@ -113,6 +126,8 @@ public class web_DCODE extends BaseClass {
 
 
 
+
+
     }
 
     @Given("^Se realiza el flujo DCODE extrae cien \"([^\"]*)\"$")
@@ -140,48 +155,118 @@ public class web_DCODE extends BaseClass {
         driver.findElement(btn_orden).click();
         Thread.sleep(8000);
 
+        String validador1 = driver.findElement(validador_val1).getAttribute("style");
+        String validador2 = driver.findElement(validador_val2).getAttribute("style");
+        String validador3 = driver.findElement(validador_val3).getAttribute("style");
+        String validador4 = driver.findElement(validador_val4).getAttribute("style");
+        String validador5 = driver.findElement(validador_val5).getAttribute("style");
+        String validador6 = driver.findElement(validador_val6).getAttribute("style");
+        String validador7 = driver.findElement(validador_val7).getAttribute("style");
+        String validador8 = driver.findElement(validador_val8).getAttribute("style");
+        String validador9 = driver.findElement(validador_val9).getAttribute("style");
+        String validador10 = driver.findElement(validador_val10).getAttribute("style");
+
         switch(caso) {
             case "1":
-                String valor1 = driver.findElement(txt_val1).getText();
-                System.out.println(valor1);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 3, valor1.substring(1, valor1.length() -1));
+                if(validador1.equals("color: red;")){
+                    String valor1 = "";
+                    System.out.println(valor1);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 3, valor1);
+                }else{
+                    String valor1 = driver.findElement(txt_val1).getText();
+                    System.out.println(valor1);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 1, 3, valor1.substring(1, valor1.length() -1));
+                }
 
-                String valor2 = driver.findElement(txt_val2).getText();
-                System.out.println(valor2);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 2, 3, valor2.substring(1, valor2.length() -1));
+                if(validador2.equals("color: red;")){
+                    String valor2 = "";
+                    System.out.println(valor2);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 2, 3, valor2);
+                }else{
+                    String valor2 = driver.findElement(txt_val2).getText();
+                    System.out.println(valor2);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 2, 3, valor2.substring(1, valor2.length() -1));
+                }
 
-                String valor3 = driver.findElement(txt_val3).getText();
-                System.out.println(valor3);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 3, 3, valor3.substring(1, valor3.length() -1));
+                if(validador3.equals("color: red;")){
+                    String valor3 = "";
+                    System.out.println(valor3);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 3, 3, valor3);
+                }else{
+                    String valor3 = driver.findElement(txt_val3).getText();
+                    System.out.println(valor3);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 3, 3, valor3.substring(1, valor3.length() -1));
+                }
 
-                String valor4 = driver.findElement(txt_val4).getText();
-                System.out.println(valor4);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 4, 3, valor4.substring(1, valor4.length() -1));
+                if(validador4.equals("color: red;")){
+                    String valor4 = "";
+                    System.out.println(valor4);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 4, 3, valor4);
+                }else{
+                    String valor4 = driver.findElement(txt_val4).getText();
+                    System.out.println(valor4);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 4, 3, valor4.substring(1, valor4.length() -1));
+                }
 
-                String valor5 = driver.findElement(txt_val5).getText();
-                System.out.println(valor5);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 5, 3, valor5.substring(1, valor5.length() -1));
+                if(validador5.equals("color: red;")){
+                    String valor5 = "";
+                    System.out.println(valor5);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 5, 3, valor5);
+                }else{
+                    String valor5 = driver.findElement(txt_val5).getText();
+                    System.out.println(valor5);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 5, 3, valor5.substring(1, valor5.length() -1));
+                }
 
-                String valor6 = driver.findElement(txt_val6).getText();
-                System.out.println(valor6);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 6, 3, valor6.substring(1, valor6.length() -1));
+                if(validador6.equals("color: red;")){
+                    String valor6 = "";
+                    System.out.println(valor6);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 6, 3, valor6);
+                }else{
+                    String valor6 = driver.findElement(txt_val6).getText();
+                    System.out.println(valor6);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 6, 3, valor6.substring(1, valor6.length() -1));
+                }
 
-                String valor7 = driver.findElement(txt_val7).getText();
-                System.out.println(valor7);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 7, 3, valor7.substring(1, valor7.length() -1));
+                if(validador7.equals("color: red;")){
+                    String valor7 = "";
+                    System.out.println(valor7);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 7, 3, valor7);
+                }else{
+                    String valor7 = driver.findElement(txt_val7).getText();
+                    System.out.println(valor7);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 7, 3, valor7.substring(1, valor7.length() -1));
+                }
 
-                String valor8 = driver.findElement(txt_val8).getText();
-                System.out.println(valor8);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 8, 3, valor8.substring(1, valor8.length() -1));
+                if(validador8.equals("color: red;")){
+                    String valor8 = "";
+                    System.out.println(valor8);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 8, 3, valor8);
+                }else{
+                    String valor8 = driver.findElement(txt_val8).getText();
+                    System.out.println(valor8);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 8, 3, valor8.substring(1, valor8.length() -1));
+                }
 
-                String valor9 = driver.findElement(txt_val9).getText();
-                System.out.println(valor9);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 3, valor9.substring(1, valor9.length() -1));
+                if(validador9.equals("color: red;")){
+                    String valor9 = "";
+                    System.out.println(valor9);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 3, valor9);
+                }else{
+                    String valor9 = driver.findElement(txt_val9).getText();
+                    System.out.println(valor9);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 3, valor9.substring(1, valor9.length() -1));
+                }
 
-                String valor10 = driver.findElement(txt_val10).getText();
-                System.out.println(valor10);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 3, valor10.substring(1, valor10.length() -1));
-
+                if(validador10.equals("color: red;")){
+                    String valor10 = "";
+                    System.out.println(valor10);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 3, valor10);
+                }else{
+                    String valor10 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor10);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 3, valor10.substring(1, valor10.length() -1));
+                }
                 break;
             case "2":
                 String valor11 = driver.findElement(txt_val1).getText();
@@ -220,9 +305,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor19);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 4, valor19.substring(1, valor19.length() -1));
 
-                String valor20 = driver.findElement(txt_val10).getText();
-                System.out.println(valor20);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 4, valor20.substring(1, valor20.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor20 = "";
+                    System.out.println(valor20);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 4, valor20);
+                }else{
+                    String valor20 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor20);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 4, valor20.substring(1, valor20.length() -1));
+                }
 
                 break;
             case "3":
@@ -262,9 +353,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor29);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 5, valor29.substring(1, valor29.length() -1));
 
-                String valor30 = driver.findElement(txt_val10).getText();
-                System.out.println(valor30);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 5, valor30.substring(1, valor30.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor30 = "";
+                    System.out.println(valor30);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 5, valor30);
+                }else{
+                    String valor30 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor30);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 5, valor30.substring(1, valor30.length() -1));
+                }
                 break;
 
             case "4":
@@ -304,9 +401,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor39);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 6, valor39.substring(1, valor39.length() -1));
 
-                String valor40 = driver.findElement(txt_val10).getText();
-                System.out.println(valor40);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 6, valor40.substring(1, valor40.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor40 = "";
+                    System.out.println(valor40);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 6, valor40);
+                }else{
+                    String valor40 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor40);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 6, valor40.substring(1, valor40.length() -1));
+                }
                 break;
 
             case "5":
@@ -346,9 +449,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor49);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 7, valor49.substring(1, valor49.length() -1));
 
-                String valor50 = driver.findElement(txt_val10).getText();
-                System.out.println(valor50);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 7, valor50.substring(1, valor50.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor50 = "";
+                    System.out.println(valor50);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 7, valor50);
+                }else{
+                    String valor50 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor50);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 7, valor50.substring(1, valor50.length() -1));
+                }
                 break;
 
             case "6":
@@ -388,9 +497,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor59);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 8, valor59.substring(1, valor59.length() -1));
 
-                String valor60 = driver.findElement(txt_val10).getText();
-                System.out.println(valor60);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 8, valor60.substring(1, valor60.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor60 = "";
+                    System.out.println(valor60);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 8, valor60);
+                }else{
+                    String valor60 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor60);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 8, valor60.substring(1, valor60.length() -1));
+                }
                 break;
 
             case "7":
@@ -430,9 +545,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor69);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 9, valor69.substring(1, valor69.length() -1));
 
-                String valor70 = driver.findElement(txt_val10).getText();
-                System.out.println(valor70);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 9, valor70.substring(1, valor70.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor70 = "";
+                    System.out.println(valor70);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 9, valor70);
+                }else{
+                    String valor70 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor70);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 9, valor70.substring(1, valor70.length() -1));
+                }
                 break;
 
             case "8":
@@ -472,9 +593,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor79);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 10, valor79.substring(1, valor79.length() -1));
 
-                String valor80 = driver.findElement(txt_val10).getText();
-                System.out.println(valor80);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 10, valor80.substring(1, valor80.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor80 = "";
+                    System.out.println(valor80);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 10, valor80);
+                }else{
+                    String valor80 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor80);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 10, valor80.substring(1, valor80.length() -1));
+                }
                 break;
 
             case "9":
@@ -514,9 +641,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor89);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 11, valor89.substring(1, valor89.length() -1));
 
-                String valor90 = driver.findElement(txt_val10).getText();
-                System.out.println(valor90);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 11, valor90.substring(1, valor90.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor90 = "";
+                    System.out.println(valor90);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 11, valor90);
+                }else{
+                    String valor90 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor90);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 11, valor90.substring(1, valor90.length() -1));
+                }
                 break;
             case "10":
                 String valor91 = driver.findElement(txt_val1).getText();
@@ -555,9 +688,15 @@ public class web_DCODE extends BaseClass {
                 System.out.println(valor99);
                 ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 9, 12, valor99.substring(1, valor99.length() -1));
 
-                String valor100 = driver.findElement(txt_val10).getText();
-                System.out.println(valor100);
-                ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 12, valor100.substring(1, valor100.length() -1));
+                if(validador10.equals("color: red;")){
+                    String valor100 = "";
+                    System.out.println(valor100);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 12, valor100);
+                }else{
+                    String valor100 = driver.findElement(txt_val10).getText();
+                    System.out.println(valor100);
+                    ExcelReader.writeCellValue(EXCEL_WEB, LOGIN_WEB, 10, 12, valor100.substring(1, valor100.length() -1));
+                }
                 break;
         }
     }
